@@ -1,0 +1,67 @@
+<%- include('./template/header') %>
+
+
+  <h1 class="display-3">Thêm thông tin sinh viên</h1>
+  <hr class="my-2">
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col">
+        <label for="msv">Mã sinh viên:</label>
+        <input type="text" class="form-control" name="msv" id="msv" aria-describedby="helpId"
+          placeholder="Điền mã sinh viên">
+      </div>
+      <div class="col">
+        <label for="fullName">Họ tên:</label>
+        <input type="text" class="form-control" name="fullName" id="fullName" aria-describedby="helpId"
+          placeholder="Điền họ tên">
+      </div>
+      <div class="col">
+        <label for="birthDay">Năm sinh:</label>
+        <input type="date" class="form-control" name="birthDay" id="birthDay" aria-describedby="helpId"
+          placeholder="Điền năm sinh">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="addRess">Quê quán:</label>
+        <select class="form-control" name="addRess" id="addRess">
+          <option>--</option>
+          <option>Nam Định</option>
+          <option>Hà Nội</option>
+          <option>Thanh Hóa</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="phoneNumber">Số điện thoại:</label>
+        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" aria-describedby="helpId"
+          placeholder="Điền số điện thoại">
+      </div>
+      <div class="col">
+        <label for="phoneNumber">Image:</label>
+        <form id="upload-widget" method="post" action="/uploadImage" class="dropzone">
+          <div class="fallback">
+            <input name="file" type="file" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <button type="submit" id="add" class="btn btn-primary">Thêm</button>
+  <a name="" id="" class="btn btn-primary" href="/viewdata" role="button">Quay lại</a>
+  <br><br>
+  </div>
+
+
+  <%- include('./template/footer') %>
+
+    <script type="text/javascript" src="/item/add.js"></script>
+
+
+    </script>
+
+
+    </body>
+
+    </html>

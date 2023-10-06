@@ -1,0 +1,115 @@
+<%- include('./template/header') %>
+  <h1 class="display-3">Danh sách sinh viên</h1>
+  <hr class="my-2">
+  </div>
+
+  <div class="form-inline">
+    <input type="text" class="form-control mb-2 mr-sm-2" name="search_msv" id="search_msv" aria-describedby="helpId"
+      placeholder="Tìm kiếm theo mã sinh viên">
+    <input type="text" class="form-control mb-2 mr-sm-2" name="search_name" id="search_name" aria-describedby="helpId"
+      placeholder="Tìm kiếm theo tên sinh viên">
+    <button type="submit" class="btn btn-primary" id="search_value">Tìm kiếm <i
+        class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+
+  <a name="" id="" class="btn btn-primary" href="/add" role="button" style="float: right;">Thêm sinh viên</i></a>
+
+
+  <br><br>
+
+  <!--Table data-->
+  <table class="table text-center" border="1">
+
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã sinh viên</th>
+        <th>Tên sinh viên</th>
+        <th>Ngày sinh</th>
+        <th>Địa chỉ</th>
+        <th>Số điện thoại</th>
+        <th>Avatar</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody style="line-height: 65px">
+
+    </tbody>
+  </table>
+
+  <!--pagination-->
+  <nav aria-label="...">
+    <ul class="pagination pagination-lg" style="float: right;">
+    </ul>
+  </nav>
+
+  <!--Update-->
+  <!-- Modal -->
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Sửa thông tin sinh viên</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="form-group">
+            <fieldset disabled>
+              <input type="hidden" class="form-control" name="getid" id="getid" aria-describedby="helpId"
+                placeholder="">
+              <input type="hidden" class="form-control" name="getpage" id="getpage" aria-describedby="helpId"
+                placeholder="">
+            </fieldset>
+            <fieldset disabled>
+              <label for="editmsv">Mã sinh viên:</label>
+              <input type="text" class="form-control" name="editmsv" id="editmsv" aria-describedby="helpId"
+                placeholder="">
+            </fieldset>
+            <label for="editfullName">Họ tên:</label>
+            <input type="text" class="form-control" name="editfullName" id="editfullName" aria-describedby="helpId"
+              placeholder="">
+            <label for="editbirthDay">Năm sinh:</label>
+            <input type="date" class="form-control" name="editbirthDay" id="editbirthDay" aria-describedby="helpId"
+              placeholder="">
+            <label for="editaddRess">Quê quán:</label>
+            <select class="form-control" name="editaddRess" id="editaddRess">
+              <option>--</option>
+              <option>Nam Định</option>
+              <option>Hà Nội</option>
+              <option>Thanh Hóa</option>
+            </select>
+            <label for="editphoneNumber">Số điện thoại:</label>
+            <input type="text" class="form-control" name="editphoneNumber" id="editphoneNumber"
+              aria-describedby="helpId" placeholder="Sửa số điện thoại">
+            <label for="editImage">Avatar</label>
+            <form id="upload-widget" method="post" action="/uploadImage" class="dropzone">
+              <div class="fallback">
+                <input name="file" type="file" />
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" id="update_value" class="btn btn-primary" data-dismiss="modal">Update</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <%- include('./template/footer') %>
+
+
+    <script src="/item/view.js"></script>
+    </body>
+
+    </html>
